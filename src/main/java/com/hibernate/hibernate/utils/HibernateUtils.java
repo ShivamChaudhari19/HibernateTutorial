@@ -9,6 +9,7 @@ public class HibernateUtils {
         try {
             if(sessionFactory==null){
                 sessionFactory=new Configuration()
+                                    .addAnnotatedClass(model.Students.class)
                                     .configure("hibernate.cfg.xml")
                                     .buildSessionFactory();
             }

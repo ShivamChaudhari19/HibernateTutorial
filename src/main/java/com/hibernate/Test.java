@@ -19,6 +19,7 @@ class Test{
             session.persist(students1);
             transaction.commit();
             System.out.println("Instance saved successfully!!!!");
+            session.close();
         }catch (Exception e){
             System.out.println(e);
         }
