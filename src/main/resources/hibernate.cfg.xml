@@ -4,14 +4,18 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+<!--        Database Configuration-->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/book</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/students</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">shivam</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<!--        Hibernate Configuration-->
+<!--        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
         <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.format_sql">true</property>
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.current_session_context_class">thread</property>
-        <mapping class="com.hibernate.Book"/>
+<!--        <property name="hibernate.current_session_context_class">thread</property>-->
+<!--        mapping class-->
+        <mapping class="model.Students"/>
     </session-factory>
 </hibernate-configuration>
